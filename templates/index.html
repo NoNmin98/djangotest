@@ -1,0 +1,17 @@
+{# 用来添加静态文件 #}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    这是首页
+    {% for item in list_data %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    <a href="{% url 'logout' %}">退出登录</a>
+    <img src="{% static 'a.jpg' %}" alt="">
+</body>
+</html>
